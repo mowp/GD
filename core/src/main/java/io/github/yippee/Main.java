@@ -43,7 +43,7 @@ public class Main extends ApplicationAdapter {
         if (player.getIsAlive() == 1) {
             time = time + 1;
             if (time == 1) {
-                player.setXPos(player.getXPos() + 2);
+                player.setXPos(player.getXPos() + 3);
                 time = 0;
             }
             player.debug();
@@ -63,7 +63,7 @@ public class Main extends ApplicationAdapter {
 
             spikes[0].setXPos(360);
 
-            if (player.getXPos() + player.getWidth() >= spikes[0].getXPos() + spikes[0].getHeight() && player.getXPos() < spikes[0].getXPos() + spikes[0].getWidth()) {
+            if (player.getXPos() + player.getWidth() >= spikes[0].getXPos() + spikes[0].getHeight() && player.getXPos() < spikes[0].getXPos() + spikes[0].getWidth() && player.getYPos() <= spikes[0].getYPos() + spikes[0].getHeight()) {
                 System.out.println("hit");
             }
 
