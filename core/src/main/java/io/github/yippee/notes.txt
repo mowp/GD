@@ -1,0 +1,21 @@
+        if (Gdx.input.isKeyPressed(Input.Keys.F)) {
+            sR.identity();
+            sR.translate(XPos + width / 2, YPos + height / 2, 0);
+            sR.rotate(0, 0, 1, 45);
+            sR.rect(-width / 2, -height / 2, width, height);
+            sR.identity(); // Reset transformations
+        } else {
+            sR.rect(XPos, YPos, width, height);
+        }
+
+        working rotation
+
+        if (spin == 1) {
+                    sR.identity();
+                    sR.translate(XPos + width / 2, YPos + height / 2, 0);
+                    sR.rotate(0, 0, 1, (System.currentTimeMillis() % 36000) / 1.0f); // Smooth rotation
+                    sR.rect(-width / 2, -height / 2, width, height);
+                    sR.identity(); // Reset transformations
+                } else {
+                    sR.rect(XPos, YPos, width, height);
+                }
